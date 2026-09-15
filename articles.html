@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Articles | Mangarjong Editorial Board</title>
+
+<meta name="description" content="Articles published through the Mangarjong Editorial Board.">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f4ec;
+    color: #292a25;
+    line-height: 1.7;
+}
+
+/* HEADER */
+
+header {
+    background: #173b2b;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #d8b875;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+    background: #e9e3d3;
+    padding: 75px 8%;
+    border-bottom: 1px solid #d5cdbb;
+}
+
+.page-header h1 {
+    color: #173b2b;
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.page-header p {
+    max-width: 760px;
+    font-size: 18px;
+    color: #55564f;
+}
+
+/* CONTENT */
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 70px 7%;
+}
+
+.introduction {
+    max-width: 850px;
+    margin-bottom: 50px;
+}
+
+.introduction p {
+    font-size: 17px;
+}
+
+/* SEARCH */
+
+.search-area {
+    margin-bottom: 45px;
+}
+
+.search-area input {
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #cfc6b3;
+    background: #fffdf8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-area input:focus {
+    border-color: #173b2b;
+}
+
+/* ARTICLE ARCHIVE */
+
+.archive-title {
+    color: #173b2b;
+    font-size: 30px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #cfc6b3;
+    padding-bottom: 12px;
+}
+
+.article-empty {
+    background: #fffdf8;
+    border: 1px solid #d8d0bf;
+    padding: 65px 30px;
+    text-align: center;
+}
+
+.article-empty .symbol {
+    color: #a47b32;
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.article-empty h2 {
+    color: #173b2b;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.article-empty p {
+    max-width: 650px;
+    margin: auto;
+    color: #66665f;
+}
+
+/* FUTURE ARTICLE FEATURES */
+
+.features {
+    margin-top: 60px;
+}
+
+.features h2 {
+    color: #173b2b;
+    font-size: 27px;
+    margin-bottom: 22px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.feature {
+    background: #eee9dc;
+    border: 1px solid #d8d0bf;
+    padding: 25px;
+}
+
+.feature h3 {
+    color: #173b2b;
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.feature p {
+    color: #62625c;
+    font-size: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #173b2b;
+    color: #dfe5df;
+    padding: 35px 7%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    .container {
+        padding: 50px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Mangarjong Editorial Board
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="board.html">Editorial Board</a>
+        <a href="volumes.html">Volumes</a>
+        <a href="articles.html">Articles</a>
+        <a href="index.html#language">Mangar Language</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<section class="page-header">
+
+    <h1>Articles</h1>
+
+    <p>
+        Explore articles and scholarly contributions published through
+        the Mangarjong Editorial Board.
+    </p>
+
+</section>
+
+
+<main class="container">
+
+    <section class="introduction">
+
+        <p>
+            This section will provide a digital archive of articles and
+            other written contributions published through the Mangarjong
+            Editorial Board. Each entry will be linked to its original
+            publication information.
+        </p>
+
+    </section>
+
+
+    <section class="search-area">
+
+        <input
+            type="search"
+            placeholder="Search articles..."
+            aria-label="Search articles"
+        >
+
+    </section>
+
+
+    <h2 class="archive-title">
+        Article Archive
+    </h2>
+
+
+    <section class="article-empty">
+
+        <div class="symbol">◆</div>
+
+        <h2>Articles Will Be Added Here</h2>
+
+        <p>
+            The article archive is currently being organised. Published
+            articles will be added with verified titles, author names,
+            publication details and links to the full article or digital
+            copy where available.
+        </p>
+
+    </section>
+
+
+    <section class="features">
+
+        <h2>Article Information</h2>
+
+        <div class="feature-grid">
+
+            <div class="feature">
+
+                <h3>Author</h3>
+
+                <p>
+                    The name or names of the contributors will be clearly
+                    displayed with each article.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Publication Details</h3>
+
+                <p>
+                    Articles will include their relevant volume, year and
+                    other verified publication information.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <h3>Full Text</h3>
+
+                <p>
+                    Where available, readers will be able to access the
+                    complete article or its original digital publication.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p><strong>Mangarjong Editorial Board</strong></p>
+
+    <p>Established in 2018</p>
+
+    <p>Website developed by Ronit Magar Thapa</p>
+
+</footer>
+
+</body>
+</html>
