@@ -7,37 +7,41 @@
 <title>Search | Mangarjong Editorial Board</title>
 
 <style>
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    font-family: Georgia, "Times New Roman", serif;
     background: #f7f3e9;
     color: #2d2d2d;
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.7;
 }
 
+/* HEADER */
+
 header {
     background: #173f35;
-    color: #ffffff;
+    color: white;
     border-bottom: 4px solid #a98445;
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
     padding: 22px 25px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 30px;
 }
 
 .logo {
-    text-decoration: none;
     color: white;
+    text-decoration: none;
+    min-width: 180px;
 }
 
 .logo h1 {
@@ -47,8 +51,9 @@ header {
 }
 
 .logo span {
-    font-size: 13px;
+    display: block;
     color: #d8c99d;
+    font-size: 13px;
     letter-spacing: 1px;
 }
 
@@ -56,49 +61,54 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    gap: 14px;
+    gap: 15px;
 }
 
 nav a {
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.2s;
 }
 
 nav a:hover {
     color: #d8c99d;
 }
 
+/* PAGE HEADER */
+
 .page-header {
     max-width: 1000px;
     margin: auto;
-    padding: 70px 25px 35px;
+    padding: 75px 25px 40px;
     text-align: center;
 }
 
 .page-header h2 {
     margin: 0 0 12px;
     color: #173f35;
-    font-size: 38px;
+    font-size: 40px;
 }
 
 .page-header p {
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
     color: #666;
 }
 
-.search-section {
-    max-width: 850px;
-    margin: 20px auto 80px;
+/* SEARCH */
+
+.search-area {
+    max-width: 900px;
+    margin: 0 auto 90px;
     padding: 0 25px;
 }
 
 .search-box {
-    background: #ffffff;
+    background: white;
     border: 1px solid #ded8ca;
-    padding: 30px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    padding: 35px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
 .search-form {
@@ -106,82 +116,96 @@ nav a:hover {
     gap: 10px;
 }
 
-.search-form input {
+.search-input {
     flex: 1;
-    padding: 15px;
-    border: 1px solid #c9c3b5;
-    font-family: inherit;
-    font-size: 16px;
+    min-width: 0;
+    padding: 15px 16px;
+    border: 1px solid #bbb5a8;
     background: #fffdf8;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    outline: none;
 }
 
-.search-form button {
-    padding: 15px 25px;
+.search-input:focus {
+    border-color: #173f35;
+}
+
+.search-button {
     border: none;
+    padding: 15px 28px;
     background: #173f35;
     color: white;
-    font-family: inherit;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 16px;
     cursor: pointer;
 }
 
-.search-form button:hover {
+.search-button:hover {
     background: #24584b;
 }
 
-#results {
-    margin-top: 30px;
+/* RESULTS */
+
+.results {
+    margin-top: 35px;
 }
 
 .result {
-    background: #ffffff;
+    background: #fffdf8;
     border-left: 4px solid #a98445;
-    padding: 20px;
+    padding: 20px 22px;
     margin-bottom: 15px;
 }
 
 .result h3 {
-    margin: 0 0 5px;
+    margin: 0 0 7px;
     color: #173f35;
+    font-size: 21px;
 }
 
 .result p {
-    margin: 5px 0;
+    margin: 5px 0 12px;
     color: #555;
 }
 
-.result a {
-    color: #8a682f;
-    text-decoration: none;
+.result-link {
+    display: inline-block;
+    background: #173f35;
+    color: white !important;
+    text-decoration: none !important;
+    padding: 9px 15px;
+    font-size: 14px;
 }
 
-.result a:hover {
-    text-decoration: underline;
+.result-link:hover {
+    background: #24584b;
 }
 
-.no-results {
+.message {
     text-align: center;
     padding: 25px;
     color: #777;
 }
 
+/* FOOTER */
+
 footer {
     background: #173f35;
     color: #ddd;
-    margin-top: 50px;
 }
 
 .footer-inner {
-    max-width: 1200px;
+    max-width: 1250px;
     margin: auto;
-    padding: 35px 25px;
+    padding: 40px 25px;
 }
 
 .footer-links {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .footer-links a {
@@ -201,7 +225,9 @@ footer {
     color: #bbb;
 }
 
-@media (max-width: 800px) {
+/* MOBILE */
+
+@media (max-width: 850px) {
 
     .header-inner {
         flex-direction: column;
@@ -213,23 +239,33 @@ footer {
     }
 
     .page-header h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
+}
+
+@media (max-width: 600px) {
 
     .search-form {
         flex-direction: column;
     }
 
-    .search-form button {
+    .search-button {
         width: 100%;
     }
+
+    .search-box {
+        padding: 22px;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
+
     <div class="header-inner">
 
         <a href="index.html" class="logo">
@@ -251,35 +287,47 @@ footer {
         </nav>
 
     </div>
+
 </header>
+
 
 <main>
 
     <section class="page-header">
+
         <h2>Search Mangarjong</h2>
+
         <p>
             Search the Mangarjong Editorial Board website for publications,
             articles, language resources, cultural documentation and other
             available information.
         </p>
+
     </section>
 
-    <section class="search-section">
+
+    <section class="search-area">
 
         <div class="search-box">
 
-            <form class="search-form" onsubmit="performSearch(event)">
+            <form id="searchForm" class="search-form">
+
                 <input
                     type="search"
                     id="searchInput"
+                    class="search-input"
                     placeholder="Search the website..."
-                    aria-label="Search the website"
+                    autocomplete="off"
                 >
 
-                <button type="submit">Search</button>
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+
             </form>
 
-            <div id="results"></div>
+
+            <div id="results" class="results"></div>
 
         </div>
 
@@ -287,29 +335,38 @@ footer {
 
 </main>
 
+
 <footer>
 
     <div class="footer-inner">
 
         <div class="footer-links">
+
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="board.html">Editorial Board</a>
             <a href="volumes.html">Volumes</a>
             <a href="articles.html">Articles</a>
+            <a href="language.html">Mangar Language</a>
             <a href="culture.html">Culture &amp; Heritage</a>
             <a href="contributors.html">Contributors</a>
             <a href="news.html">News &amp; Updates</a>
             <a href="contact.html">Contact</a>
+
         </div>
 
+
         <div class="footer-bottom">
+
             © 2018 Mangarjong Editorial Board.
             Website developed by Ronit Magar Thapa.
+
         </div>
 
     </div>
 
 </footer>
+
 
 <script>
 
@@ -317,61 +374,62 @@ const pages = [
 
     {
         title: "About Mangarjong Editorial Board",
-        description: "Learn about the Mangarjong Editorial Board, its establishment in 2018 and its publication activities.",
+        description: "Learn about the Mangarjong Editorial Board and its publication activities.",
         url: "about.html"
     },
 
     {
         title: "Editorial Board",
-        description: "Meet the Chief Advisor, Advisor, Editor-in-Chief, English Editors, Nepali Editors, Mangar Editors and Treasurers.",
+        description: "Meet the members of the Mangarjong Editorial Board.",
         url: "board.html"
     },
 
     {
         title: "Volumes & Publications",
-        description: "Explore the publication archive and future digital collection of Mangarjong volumes.",
+        description: "Explore Mangarjong volumes and publications.",
         url: "volumes.html"
     },
 
     {
         title: "Articles",
-        description: "Search and explore articles published through Mangarjong Editorial Board.",
+        description: "Explore articles published through Mangarjong Editorial Board.",
         url: "articles.html"
     },
 
     {
         title: "Mangar Language",
-        description: "Language documentation, vocabulary, expressions and other verified Mangar language resources.",
+        description: "Explore verified Mangar language resources, vocabulary and documentation.",
         url: "language.html"
     },
 
     {
         title: "Culture & Heritage",
-        description: "Documentation of Mangar traditions, festivals, rituals, history, dress, food and oral knowledge.",
+        description: "Explore Mangar culture, traditions, festivals, rituals, history and heritage.",
         url: "culture.html"
     },
 
     {
         title: "Contributors",
-        description: "Information about contributors and their published works.",
+        description: "Explore contributors and their published works.",
         url: "contributors.html"
     },
 
     {
         title: "News & Updates",
-        description: "Publication announcements, editorial activities, events and official updates.",
+        description: "Read publication announcements, editorial activities and official updates.",
         url: "news.html"
     },
 
     {
         title: "Contact",
-        description: "Contact information for editorial enquiries, publications and cultural or language documentation.",
+        description: "Contact the Mangarjong Editorial Board for editorial enquiries and publications.",
         url: "contact.html"
     }
 
 ];
 
-function performSearch(event) {
+
+document.getElementById("searchForm").addEventListener("submit", function(event) {
 
     event.preventDefault();
 
@@ -385,10 +443,12 @@ function performSearch(event) {
     if (query === "") {
 
         results.innerHTML =
-            '<div class="no-results">Please enter a search term.</div>';
+            '<div class="message">Please enter something to search.</div>';
 
         return;
+
     }
+
 
     const matches = pages.filter(function(page) {
 
@@ -399,13 +459,16 @@ function performSearch(event) {
 
     });
 
+
     if (matches.length === 0) {
 
         results.innerHTML =
-            '<div class="no-results">No matching results were found.</div>';
+            '<div class="message">No matching pages were found.</div>';
 
         return;
+
     }
+
 
     matches.forEach(function(page) {
 
@@ -414,21 +477,17 @@ function performSearch(event) {
         result.className = "result";
 
         result.innerHTML =
-            "<h3>" +
-            page.title +
-            "</h3>" +
-            "<p>" +
-            page.description +
-            "</p>" +
-            '<a href="' +
-            page.url +
-            '">View page →</a>';
+            '<h3>' + page.title + '</h3>' +
+            '<p>' + page.description + '</p>' +
+            '<a class="result-link" href="' + page.url + '">' +
+            'Open Page →' +
+            '</a>';
 
         results.appendChild(result);
 
     });
 
-}
+});
 
 </script>
 
