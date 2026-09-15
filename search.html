@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Search | Mangarjong Editorial Board</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f7f3e9;
+    color: #2d2d2d;
+    line-height: 1.7;
+}
+
+header {
+    background: #173f35;
+    color: #ffffff;
+    border-bottom: 4px solid #a98445;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 22px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    font-size: 13px;
+    color: #d8c99d;
+    letter-spacing: 1px;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #d8c99d;
+}
+
+.page-header {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 25px 35px;
+    text-align: center;
+}
+
+.page-header h2 {
+    margin: 0 0 12px;
+    color: #173f35;
+    font-size: 38px;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: auto;
+    color: #666;
+}
+
+.search-section {
+    max-width: 850px;
+    margin: 20px auto 80px;
+    padding: 0 25px;
+}
+
+.search-box {
+    background: #ffffff;
+    border: 1px solid #ded8ca;
+    padding: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.search-form {
+    display: flex;
+    gap: 10px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #c9c3b5;
+    font-family: inherit;
+    font-size: 16px;
+    background: #fffdf8;
+}
+
+.search-form button {
+    padding: 15px 25px;
+    border: none;
+    background: #173f35;
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background: #24584b;
+}
+
+#results {
+    margin-top: 30px;
+}
+
+.result {
+    background: #ffffff;
+    border-left: 4px solid #a98445;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.result h3 {
+    margin: 0 0 5px;
+    color: #173f35;
+}
+
+.result p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.result a {
+    color: #8a682f;
+    text-decoration: none;
+}
+
+.result a:hover {
+    text-decoration: underline;
+}
+
+.no-results {
+    text-align: center;
+    padding: 25px;
+    color: #777;
+}
+
+footer {
+    background: #173f35;
+    color: #ddd;
+    margin-top: 50px;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #d8c99d;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 18px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    .page-header h2 {
+        font-size: 30px;
+    }
+
+    .search-form {
+        flex-direction: column;
+    }
+
+    .search-form button {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <a href="index.html" class="logo">
+            <h1>Mangarjong</h1>
+            <span>Editorial Board</span>
+        </a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="board.html">Editorial Board</a>
+            <a href="volumes.html">Volumes</a>
+            <a href="articles.html">Articles</a>
+            <a href="language.html">Mangar Language</a>
+            <a href="culture.html">Culture &amp; Heritage</a>
+            <a href="contributors.html">Contributors</a>
+            <a href="news.html">News &amp; Updates</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </div>
+</header>
+
+<main>
+
+    <section class="page-header">
+        <h2>Search Mangarjong</h2>
+        <p>
+            Search the Mangarjong Editorial Board website for publications,
+            articles, language resources, cultural documentation and other
+            available information.
+        </p>
+    </section>
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <form class="search-form" onsubmit="performSearch(event)">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search the website..."
+                    aria-label="Search the website"
+                >
+
+                <button type="submit">Search</button>
+            </form>
+
+            <div id="results"></div>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="board.html">Editorial Board</a>
+            <a href="volumes.html">Volumes</a>
+            <a href="articles.html">Articles</a>
+            <a href="culture.html">Culture &amp; Heritage</a>
+            <a href="contributors.html">Contributors</a>
+            <a href="news.html">News &amp; Updates</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-bottom">
+            © 2018 Mangarjong Editorial Board.
+            Website developed by Ronit Magar Thapa.
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+const pages = [
+
+    {
+        title: "About Mangarjong Editorial Board",
+        description: "Learn about the Mangarjong Editorial Board, its establishment in 2018 and its publication activities.",
+        url: "about.html"
+    },
+
+    {
+        title: "Editorial Board",
+        description: "Meet the Chief Advisor, Advisor, Editor-in-Chief, English Editors, Nepali Editors, Mangar Editors and Treasurers.",
+        url: "board.html"
+    },
+
+    {
+        title: "Volumes & Publications",
+        description: "Explore the publication archive and future digital collection of Mangarjong volumes.",
+        url: "volumes.html"
+    },
+
+    {
+        title: "Articles",
+        description: "Search and explore articles published through Mangarjong Editorial Board.",
+        url: "articles.html"
+    },
+
+    {
+        title: "Mangar Language",
+        description: "Language documentation, vocabulary, expressions and other verified Mangar language resources.",
+        url: "language.html"
+    },
+
+    {
+        title: "Culture & Heritage",
+        description: "Documentation of Mangar traditions, festivals, rituals, history, dress, food and oral knowledge.",
+        url: "culture.html"
+    },
+
+    {
+        title: "Contributors",
+        description: "Information about contributors and their published works.",
+        url: "contributors.html"
+    },
+
+    {
+        title: "News & Updates",
+        description: "Publication announcements, editorial activities, events and official updates.",
+        url: "news.html"
+    },
+
+    {
+        title: "Contact",
+        description: "Contact information for editorial enquiries, publications and cultural or language documentation.",
+        url: "contact.html"
+    }
+
+];
+
+function performSearch(event) {
+
+    event.preventDefault();
+
+    const input = document.getElementById("searchInput");
+    const results = document.getElementById("results");
+
+    const query = input.value.trim().toLowerCase();
+
+    results.innerHTML = "";
+
+    if (query === "") {
+
+        results.innerHTML =
+            '<div class="no-results">Please enter a search term.</div>';
+
+        return;
+    }
+
+    const matches = pages.filter(function(page) {
+
+        return (
+            page.title.toLowerCase().includes(query) ||
+            page.description.toLowerCase().includes(query)
+        );
+
+    });
+
+    if (matches.length === 0) {
+
+        results.innerHTML =
+            '<div class="no-results">No matching results were found.</div>';
+
+        return;
+    }
+
+    matches.forEach(function(page) {
+
+        const result = document.createElement("div");
+
+        result.className = "result";
+
+        result.innerHTML =
+            "<h3>" +
+            page.title +
+            "</h3>" +
+            "<p>" +
+            page.description +
+            "</p>" +
+            '<a href="' +
+            page.url +
+            '">View page →</a>';
+
+        results.appendChild(result);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
